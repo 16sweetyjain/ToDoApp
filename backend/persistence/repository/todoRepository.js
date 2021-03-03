@@ -21,9 +21,9 @@ const updateTodo = async(id,params)=>{
     return todo
 };
 
-const deletTodo =async(id)=>{
+const deleteTodo =async(id)=>{
     return await Todo.findOneAndDelete({_id:id});
 
 };
 
-module.exports={findAllTodos,findTodoById,addTodo,updateTodo,deletTodo};
+module.exports={findAllTodos,findTodoById,addTodo,updateTodo,deleteTodo};
