@@ -14,4 +14,4 @@ const TodoSchema = new mongoose.Schema({                            //defining s
 });
 
 
-module.exports = mongoose.model('Todo',TodoSchema);
+module.exports = mongoose.model('Todo',TodoSchema);                 //creating model based on defined schema
