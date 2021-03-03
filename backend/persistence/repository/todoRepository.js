@@ -1,4 +1,4 @@
-const Todo = require('./model/todomodel.js');
+const Todo = require('../model/todomodel.js');
 
 const findAllTodos = async() => {
     Todo.find({});
