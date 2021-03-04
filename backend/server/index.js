@@ -16,19 +16,19 @@ app.post("/todos", async(req,res)=>{
 
 app.get("/todos",async(req,res)=> res.send(await findAllTodos));      
 
-app.get("/todos/:id",async(req,res)=> res.send(await findTodoById(req.params.id)));
+app.get("/todo/:id",async(req,res)=> res.send(await findTodoById(req.params.id)));
 
-app.put("/todos/:id", async(req,res)=>{
+app.put("/todo/:id", async(req,res)=>{
     const todo = await updateTodo(req.params.id,req.body);
     return res.send(todo);
 });
 
-app.delete("/todos/:id", async(req,res)=>{
+app.delete("/todo/:id", async(req,res)=>{
  const todo=await deleteTodo(req.params.id,req.body);
  return res.send(todo);
 });
 
 
-const start= ({ port, callback }) =>app.listen(port, callback);            //setting up express server
+const start= ({ port, callback }) => app.listen(port, callback);            //setting up express server
 
 module.exports = {start};
